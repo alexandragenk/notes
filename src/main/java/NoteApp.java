@@ -93,7 +93,7 @@ public class NoteApp {
 
     public void start() {
         server.start();
-        System.out.println("Server started at http://localhost:8080");
+        System.out.println("Server started at http://localhost:8083");
     }
 
     public void stop() {
