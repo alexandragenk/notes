@@ -69,5 +69,5 @@ jobs:
       
       - name: Deploy to server
         run: |
-          ssh -o StrictHostKeyChecking=no -p 2232 pi@kuznet1.zapto.org "cd notes && git pull && ./mvnw clean install && ./mvnw exec:java"
+          ssh -o StrictHostKeyChecking=no -p 2232 pi@kuznet1.zapto.org "killall java && cd notes && git pull && ./mvnw clean install && nohup ./mvnw exec:java &"
 
