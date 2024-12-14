@@ -29,7 +29,7 @@ public class NoteAppTest {
     }
 
     private String sendGetRequest(String endpoint) throws IOException {
-        URL url = new URL("http://localhost:8080" + endpoint);
+        URL url = new URL("http://localhost:8083" + endpoint);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         final InputStream in;
@@ -51,7 +51,7 @@ public class NoteAppTest {
     }
 
     private String sendPostRequest(String endpoint, String content) throws IOException {
-        URL url = new URL("http://localhost:8080" + endpoint);
+        URL url = new URL("http://localhost:8083" + endpoint);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
         connection.setDoOutput(true);

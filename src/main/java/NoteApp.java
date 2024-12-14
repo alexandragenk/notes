@@ -20,7 +20,7 @@ public class NoteApp {
     }
 
     public NoteApp() throws IOException {
-        server = HttpServer.create(new InetSocketAddress(8080), 0);
+        server = HttpServer.create(new InetSocketAddress(8083), 0);
 
         server.createContext("/notes", (HttpExchange exchange) -> {
             if ("GET".equals(exchange.getRequestMethod())) {
